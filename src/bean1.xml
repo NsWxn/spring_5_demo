@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置User对象创建-->
+    <bean id="user" class="com.nsw.spring5.User"></bean>
+    <!--set方法注入属性-->
+    <!--有参构造注入属性-->
+    <bean id="orders" class="com.nsw.spring5.Orders">
+        <constructor-arg name="name" value="first"></constructor-arg>
+        <constructor-arg name="address" value="da"></constructor-arg>
+        <!--<constructor-arg index="0" value="jkj"></constructor-arg>-->
+    </bean>
+</beans>
