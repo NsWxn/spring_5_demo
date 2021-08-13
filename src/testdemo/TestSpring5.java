@@ -31,7 +31,7 @@ public class TestSpring5 {
     public void testOrders(){
         //加载spring配置文件
         ApplicationContext context=
-                new ClassPathXmlApplicationContext("bean1.xml;");
+                new ClassPathXmlApplicationContext("bean1.xml");
         //获取配置创建的对象
         Orders orders=context.getBean("orders",Orders.class);
         //System.out.println(orders);
