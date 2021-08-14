@@ -9,7 +9,7 @@
     <!--有参构造注入属性-->
     <bean id="orders" class="com.nsw.spring5.Orders">
         <constructor-arg name="name" value="first"></constructor-arg>
-        <constructor-arg name="address" value="da"></constructor-arg>
+        <constructor-arg name="address" value="大连"></constructor-arg>
         <!--<constructor-arg index="0" value="jkj"></constructor-arg>-->
     </bean>
 </beans>
