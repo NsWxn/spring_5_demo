@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--配置User对象创建-->
     <bean id="user" class="com.nsw.spring5.User"></bean>
-    <!--set方法注入属性-->
+
     <!--有参构造注入属性-->
-    <bean id="orders" class="com.nsw.spring5.Orders">
-        <constructor-arg name="name" value="first"></constructor-arg>
-        <constructor-arg name="address" value="大连"></constructor-arg>
+    <!--<bean id="orders" class="com.nsw.spring5.Orders">-->
+        <!--><constructor-arg name="name" value="first"></constructor-arg>
+        <constructor-arg name="address" value="大连"></constructor-arg>-->
         <!--<constructor-arg index="0" value="jkj"></constructor-arg>-->
+    <!--</bean>-->
+
+
+    <!--set方法注入属性-->
+    <!--<bean id="school" class="com.nsw.spring5.School" p:stname="xiaom" p:stnum="2019">-->
+        <!--使用property注入属性
+            name是属性名称
+            value是属性值
+        -->
+        <!--<property name="stname" value="xiaoming"></property>
+        <property name="stnum" value="2019"></property>-->
+    <bean id="school" class="com.nsw.spring5.School" >
+        <!--有null值-->
+        <property name="address" >
+            <null></null>
+
+        </property>
     </bean>
+
+
 </beans>
